@@ -6,7 +6,7 @@ Job:
     -Published at
     -Vacancy
     -Salary
-    -category
+    -category<!-- - ForeignKey create new model -->
     -experience
 
     -apply job
