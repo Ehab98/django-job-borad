@@ -1,6 +1,6 @@
 Job:
     -Title
-    -Location
+    -Location<!-- - use external liberary -->
     -job type
     -job description
     -Published at
@@ -8,8 +8,6 @@ Job:
     -Salary
     -category
     -experience
-    -gender
-
 
     -apply job
     -post job 
@@ -28,4 +26,4 @@ Blog:
 
 Contact
 home
-login
+acoounts
