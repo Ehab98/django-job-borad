@@ -1,6 +1,7 @@
 from django.db import models
 from django.db.models.base import Model
 from django.utils.text import slugify
+from django.contrib.auth.models import User
 '''
 why i use model.Model ? 
 answer :
@@ -21,6 +22,7 @@ def image_upload(instance,filename):
 
 
 class Job(models.Model): #every class is a table 
+    owner =models.ForeignKey(User, related_name='Job_owner', on_delete=models.CASCADE)
     title =models.CharField(max_length=100) #column
     #location
     job_type =models.CharField(max_length=15 ,choices=JOB_TYPE)
@@ -62,9 +64,10 @@ class Apply(models.Model):
     cover_letter = models.TextField(max_length=300)
     created_at =models.DateTimeField(auto_now=True)
 
-    
+
     def __str__(self):
         return self.name
     
+
     
 
