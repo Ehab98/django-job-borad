@@ -52,9 +52,6 @@ class Category(models.Model):
     
 
 
-
-    
-
 class Apply(models.Model):
     job =models.ForeignKey(Job,related_name='apply_job' ,on_delete=models.CASCADE)
     name =models.CharField(max_length=50)

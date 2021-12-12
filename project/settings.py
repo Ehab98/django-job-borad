@@ -40,12 +40,11 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     #My apps
-    'blog',
-    
-    'contact',
-    'home',
     'job',
-    "bootstrap4",
+    'bootstrap4',
+    'contact',
+    'django_filters',
+    
 ]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
