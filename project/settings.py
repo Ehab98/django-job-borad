@@ -42,9 +42,9 @@ INSTALLED_APPS = [
     #My apps
     'job',
     'bootstrap4',
-    'contact',
     'django_filters',
-    
+    'contact',
+    'rest_framework',
 ]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -133,7 +133,17 @@ STATICFILES_DIRS = [
 MEDIA_URL = 'media/'
 
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+
+# Send Email from contact 
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'hoba.reda98@gmail.com'
+EMAIL_HOST_PASSWORD = 'vwpcbjkxzdewpuvx'
+EMAIL_USE_TLS = True
+EMAIL_PORT = '587'
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
